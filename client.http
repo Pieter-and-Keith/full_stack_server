@@ -1,3 +1,36 @@
 ### Index method
-
 GET http://localhost:3000/api/details
+
+### Successfully post a new user detail
+
+POST http://localhost:3000/api/details
+Content-Type: application/json
+
+{
+    "first_name":"Burt",
+    "last_name":"Burachha",
+    "phone_number":"0466888999",
+    "street_number":123,
+    "street_name": "The Corso",
+    "suburb":"Manly",
+    "postcode":2100,
+    "state": "NSW",
+    "rego": "QQT565",
+    "make": "Nissan",
+    "model": "Patrol" 
+}
+
+### Unuccessfully post a new user detail
+
+POST http://localhost:3000/api/details
+Content-Type: application/json
+
+{
+    "first_name":"Zino",
+    "last_name":"Zatty",
+    "phone_number":"0466888999",
+    "street_number":123,
+    "street_name": "The Corso",
+    "suburb":"Manly",
+    "postcode":2100,
+}

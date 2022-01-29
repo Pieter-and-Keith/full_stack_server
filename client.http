@@ -1,6 +1,12 @@
 ### Index method
 GET http://localhost:3000/api/details
 
+### Succesfull Show method detail 1
+GET http://localhost:3000/api/details/1
+
+### Unuccesfull Show method detail 
+GET http://localhost:3000/api/details/999
+
 ### Successfully post a new user detail
 
 POST http://localhost:3000/api/details

@@ -38,5 +38,18 @@ Content-Type: application/json
     "street_number":123,
     "street_name": "The Corso",
     "suburb":"Manly",
-    "postcode":2100,
+    "postcode":2100
 }
+
+### Successfully update user detail
+
+PUT http://localhost:3000/api/details/1
+Content-Type: application/json
+
+{
+    "first_name":"Billie",
+    "last_name":"Ellish"
+}
+
+### Delete Details of User
+DELETE http://localhost:3000/api/details/4

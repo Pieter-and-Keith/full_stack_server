@@ -1,5 +1,5 @@
 class DetailsController < ApplicationController
-    before_action :set_detail, only:[:show]
+    before_action :set_detail, only:[:show,:update,:destroy]
 
     def index
         @details = Detail.all
@@ -18,6 +18,21 @@ class DetailsController < ApplicationController
             render json: @joke, status:201
         end
 
+    end
+
+    def update
+        @detail.update(detail_params)
+
+        if @detail.errors.any?
+            render json: @detail.errors, status: 422
+        else 
+            render json: @joke, status: 201
+        end
+    end
+
+    def destroy
+        @detail.delete
+        render json:204
     end
 
     private 

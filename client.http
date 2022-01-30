@@ -118,3 +118,24 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDM5N
 DELETE http://localhost:3000/api/options/5
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDQyODAsInN1YiI6MX0.XO7ZtNHOH4Eg_jfar3J9hazCI7tD9umFeTvyDSTHJHE
+
+
+### display Bookings index
+
+GET http://localhost:3000/api/bookings
+
+### display Booking 1
+GET http://localhost:3000/api/bookings/10
+
+### create booking
+POST http://localhost:3000/api/bookings
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDkxNDAsInN1YiI6MX0.B8-lMc8aBwx_O1TAY-blkfHxGWq0F6-a3RUTmme-U0w
+
+{
+    "option_id":1,
+    "date": "02/02/2022",
+    "comment": "Hello World",
+    "finished": false,
+    "paid": false
+}

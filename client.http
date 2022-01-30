@@ -76,9 +76,29 @@ Content-Type: application/json
     "password":"password10"
 }
 
+### Sign In with admin details
+POST http://localhost:3000/api/auth/sign_in
+Content-Type: application/json
+
+{
+    "email":"admin@test.com",
+    "password":"admin"
+}
+
 
 ### Show options index
 GET http://localhost:3000/api/options
 
 ### Show option 1 succesfully
 GET http://localhost:3000/api/options/2
+
+### Create new option
+POST http://localhost:3000/api/options
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDI3NDQsInN1YiI6MX0.8-K2_769G5DAJx-021ET3Lep3SwgSgTqRGrFv84MDws
+
+{
+    "service_type":"abc abc abc",
+    "description":"zzz zzz zzz",
+    "price":649
+}

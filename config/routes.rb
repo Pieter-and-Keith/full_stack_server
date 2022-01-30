@@ -12,8 +12,8 @@ Rails.application.routes.draw do
       post '/sign_in', to: 'users#sign_in'
     end
     get '/options', to: 'options#index'
+    post '/options', to: 'options#create'
     get '/options/:id', to: 'options#show'
   end
-
 
 end

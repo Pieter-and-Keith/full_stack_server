@@ -21,6 +21,19 @@ class OptionsController < ApplicationController
         end
     end
 
+    def update 
+        @option.update(option_params)
+        if @option.errors.any?
+            render json:@option.errors, status: 422
+        else 
+            render json: @option, status: 201
+        end
+    end
+
+    def destroy
+        @option.delete
+        render json: 204
+    end
 
 
     private

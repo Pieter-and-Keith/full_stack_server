@@ -7,13 +7,18 @@ Rails.application.routes.draw do
     get '/details/:id', to: 'details#show'
     put '/details/:id', to: 'details#update'
     delete '/details/:id', to: 'details#destroy'
+
     scope '/auth' do 
       post '/sign_up', to: 'users#create'
       post '/sign_in', to: 'users#sign_in'
     end
+
     get '/options', to: 'options#index'
     post '/options', to: 'options#create'
     get '/options/:id', to: 'options#show'
+    put 'options/:id', to: 'options#update'
+    delete '/options/:id', to: 'options#destroy'
+
   end
 
 end

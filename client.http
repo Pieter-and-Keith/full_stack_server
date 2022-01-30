@@ -90,7 +90,7 @@ Content-Type: application/json
 GET http://localhost:3000/api/options
 
 ### Show option 1 succesfully
-GET http://localhost:3000/api/options/2
+GET http://localhost:3000/api/options/1
 
 ### Create new option
 POST http://localhost:3000/api/options
@@ -102,3 +102,19 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDI3N
     "description":"zzz zzz zzz",
     "price":649
 }
+
+### Update option
+PUT http://localhost:3000/api/options/2
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDM5NzUsInN1YiI6NH0.cGyuezjBT8WJRPIylkt2HddVO3BVLIpfO4rK5wBUcsM
+
+{
+    "service_type":"xyz xyz xyz",
+    "description":"brr brr brr",
+    "price":649
+}
+
+### Delete option
+DELETE http://localhost:3000/api/options/5
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDQyODAsInN1YiI6MX0.XO7ZtNHOH4Eg_jfar3J9hazCI7tD9umFeTvyDSTHJHE

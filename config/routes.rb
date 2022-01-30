@@ -7,6 +7,11 @@ Rails.application.routes.draw do
     get '/details/:id', to: 'details#show'
     put '/details/:id', to: 'details#update'
     delete '/details/:id', to: 'details#destroy'
+    scope '/auth' do 
+      post '/sign_up', to: 'users#create'
+      post '/sign_in', to: 'users#sign_in'
+    end
   end
+
 
 end

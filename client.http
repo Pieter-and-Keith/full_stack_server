@@ -75,3 +75,10 @@ Content-Type: application/json
     "email":"Alex10@test.com",
     "password":"password10"
 }
+
+
+### Show options index
+GET http://localhost:3000/api/options
+
+### Show option 1 succesfully
+GET http://localhost:3000/api/options/2

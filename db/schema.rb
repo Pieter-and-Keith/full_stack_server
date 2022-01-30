@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_29_053312) do
+ActiveRecord::Schema.define(version: 2022_01_30_030045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.string "date"
+    t.text "comment"
+    t.boolean "finished"
+    t.boolean "paid"
+    t.bigint "user_id", null: false
+    t.bigint "options_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["options_id"], name: "index_bookings_on_options_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
 
   create_table "details", force: :cascade do |t|
     t.string "first_name"
@@ -33,6 +46,14 @@ ActiveRecord::Schema.define(version: 2022_01_29_053312) do
     t.index ["user_id"], name: "index_details_on_user_id"
   end
 
+  create_table "options", force: :cascade do |t|
+    t.string "service_type"
+    t.text "description"
+    t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "email"
@@ -41,5 +62,7 @@ ActiveRecord::Schema.define(version: 2022_01_29_053312) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "bookings", "options", column: "options_id"
+  add_foreign_key "bookings", "users"
   add_foreign_key "details", "users"
 end

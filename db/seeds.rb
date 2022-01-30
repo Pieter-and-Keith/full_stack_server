@@ -16,3 +16,9 @@ if Detail.count == 0
     Detail.create(user_id: 2,first_name: "Pieter-Jan", last_name:"Delbecke", phone_number: "0405849602", street_number: 10, street_name:"Westminster Avenue",suburb:"Dee Why", postcode: 2099, state:"NSW", rego:"EEH66D", make:"Mazda", model:"2")
     Detail.create(user_id: 3,first_name: "Keith", last_name:"Ching", phone_number: "0499100666", street_number: 53, street_name:"George Street",suburb:"Sydney", postcode: 2000, state:"NSW", rego:"ABC321", make:"Toyota", model:"Hilux")
 end
+
+if Option.count == 0
+    Option.create(service_type: "yearly service", description: "After a full your on the road, your car deserves some love...", price: 249)
+    Option.create(service_type: "battery replacment", description: "Having troubles to get your car started? let's have us a look at it's battery", price: 450)
+    Option.create(service_type: "new tyres", description:"Are your tyres worn out? We have an awesom collection of brand new ones", price: 600)
+end

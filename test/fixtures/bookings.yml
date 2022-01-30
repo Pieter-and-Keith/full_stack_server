@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  comment: MyText
+  finished: false
+  paid: false
+  user: one
+  options: one
+
+two:
+  date: MyString
+  comment: MyText
+  finished: false
+  paid: false
+  user: two
+  options: two

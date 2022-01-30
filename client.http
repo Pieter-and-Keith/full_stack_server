@@ -139,3 +139,21 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDkxN
     "finished": false,
     "paid": false
 }
+
+### Update booking
+PUT http://localhost:3000/api/bookings/3
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDkxNDAsInN1YiI6MX0.B8-lMc8aBwx_O1TAY-blkfHxGWq0F6-a3RUTmme-U0w
+
+{
+    "option_id":4,
+    "date": "66/12/2022",
+    "comment": "BYE!!! Goodnight World",
+    "finished": true,
+    "paid": false
+}
+
+### Update booking
+DELETE  http://localhost:3000/api/bookings/1
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDkxNDAsInN1YiI6MX0.B8-lMc8aBwx_O1TAY-blkfHxGWq0F6-a3RUTmme-U0w

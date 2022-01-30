@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
     before_action :authenticate_user, only: [:create, :update, :destroy]
     before_action :set_booking, only: [:show, :update, :destroy]
+    before_action :check_ownership, only: [:update,:destroy]
 
     def index
         @bookings = Booking.all
@@ -20,6 +21,20 @@ class BookingsController < ApplicationController
         end
     end
 
+    def update
+        @booking.update(booking_params)
+        if @booking.errors.any?
+            render json: @booking.errors, status: 422
+        else
+            render json: @booking
+        end
+    end
+
+    def destroy
+        @booking.delete
+        render json:204
+    end
+
 
     private
 
@@ -35,5 +50,10 @@ class BookingsController < ApplicationController
         end
     end
 
+    def check_ownership
+        if current_user.id != @booking.user.id
+            render json: {error: "you dont have permission to do that"}, status: 401
+        end
+    end
 
 end

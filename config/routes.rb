@@ -19,6 +19,12 @@ Rails.application.routes.draw do
     put 'options/:id', to: 'options#update'
     delete '/options/:id', to: 'options#destroy'
 
+    get '/bookings', to: 'bookings#index'
+    post '/bookings', to: 'bookings#create'
+    get '/bookings/:id', to: 'bookings#show'
+    put '/bookings/:id', to: 'bookings#update'
+    delete '/bookings/:id', to: 'bookings#destroy'
+
   end
 
 end

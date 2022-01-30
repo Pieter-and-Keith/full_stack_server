@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_30_030045) do
+ActiveRecord::Schema.define(version: 2022_01_30_053600) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(version: 2022_01_30_030045) do
     t.boolean "finished"
     t.boolean "paid"
     t.bigint "user_id", null: false
-    t.bigint "options_id", null: false
+    t.bigint "option_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["options_id"], name: "index_bookings_on_options_id"
+    t.index ["option_id"], name: "index_bookings_on_option_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2022_01_30_030045) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "bookings", "options", column: "options_id"
+  add_foreign_key "bookings", "options"
   add_foreign_key "bookings", "users"
   add_foreign_key "details", "users"
 end

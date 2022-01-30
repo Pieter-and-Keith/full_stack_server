@@ -1,5 +1,7 @@
 class DetailsController < ApplicationController
-    before_action :set_detail, only:[:show,:update,:destroy]
+    before_action :authenticate_user, only:[:create, :update, :destroy]
+    before_action :set_detail, only:[:show, :update, :destroy]
+    before_action :check_ownership, only:[:update, :destroy]
 
     def index
         @details = Detail.all
@@ -7,15 +9,15 @@ class DetailsController < ApplicationController
     end
 
     def show
-        render json:@detail
+        render json: @detail
     end
 
     def create
-        @detail = Detail.create(detail_params)
+        @detail = current_user.details.create(detail_params)
         if @detail.errors.any?
-            render json: @joke.errors, status: 422
+            render json: @detail.errors, status: 422
         else 
-            render json: @joke, status:201
+            render json: @detail, status:201
         end
 
     end
@@ -26,7 +28,7 @@ class DetailsController < ApplicationController
         if @detail.errors.any?
             render json: @detail.errors, status: 422
         else 
-            render json: @joke, status: 201
+            render json: @detail, status: 201
         end
     end
 
@@ -46,6 +48,12 @@ class DetailsController < ApplicationController
             @detail = Detail.find(params[:id])
         rescue
             render json:{error:"User detail not found"}, status: 404
+        end
+    end
+
+    def check_ownership 
+        if current_user.id != @detail.user.id
+            render json: {error: "You don't have permission to do that"}, status: 401
         end
     end
 

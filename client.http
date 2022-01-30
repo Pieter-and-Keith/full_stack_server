@@ -8,13 +8,13 @@ GET http://localhost:3000/api/details/1
 GET http://localhost:3000/api/details/999
 
 ### Successfully post a new user detail
-
 POST http://localhost:3000/api/details
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM1ODk1NDcsInN1YiI6NH0.gz663Fd3jwZozZ4d3z_Wy-NlQKSWexgpo6M_AMWJwHg
 
 {
-    "first_name":"Burt",
-    "last_name":"Burachha",
+    "first_name":"Alex",
+    "last_name":"Kaporanos",
     "phone_number":"0466888999",
     "street_number":123,
     "street_name": "The Corso",
@@ -43,8 +43,9 @@ Content-Type: application/json
 
 ### Successfully update user detail
 
-PUT http://localhost:3000/api/details/1
+PUT http://localhost:3000/api/details/4
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM1ODk1NDcsInN1YiI6NH0.gz663Fd3jwZozZ4d3z_Wy-NlQKSWexgpo6M_AMWJwHg
 
 {
     "first_name":"Billie",
@@ -53,3 +54,24 @@ Content-Type: application/json
 
 ### Delete Details of User
 DELETE http://localhost:3000/api/details/4
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM1ODk1NDcsInN1YiI6NH0.gz663Fd3jwZozZ4d3z_Wy-NlQKSWexgpo6M_AMWJwHg
+
+### Create User
+POST http://localhost:3000/api/auth/sign_up
+Content-Type:  application/json
+
+{
+    "username":"Alex10",
+    "email": "Alex10@test.com",
+    "password":"password10",
+    "password_confirmation":"password10"
+}
+
+### Sign In with correct details
+POST http://localhost:3000/api/auth/sign_in
+Content-Type: application/json
+
+{
+    "email":"Alex10@test.com",
+    "password":"password10"
+}

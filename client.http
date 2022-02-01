@@ -72,8 +72,8 @@ POST http://localhost:3000/api/auth/sign_in
 Content-Type: application/json
 
 {
-    "email":"Alex10@test.com",
-    "password":"password10"
+    "email":"pieter@test.com",
+    "password":"Password1"
 }
 
 ### Sign In with admin details

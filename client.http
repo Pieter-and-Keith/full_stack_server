@@ -10,10 +10,10 @@ GET http://localhost:3000/api/details/999
 ### Successfully post a new user detail
 POST http://localhost:3000/api/details
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM1ODk1NDcsInN1YiI6NH0.gz663Fd3jwZozZ4d3z_Wy-NlQKSWexgpo6M_AMWJwHg
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM4NTg4MDIsInN1YiI6N30.0PyCAUj3EgvydAA1-RzpJe8IBIraHjGvd-x-2Lcy4U4
 
 {
-    "first_name":"Alex",
+    "first_name":"Alex11",
     "last_name":"Kaporanos",
     "phone_number":"0466888999",
     "street_number":123,
@@ -61,10 +61,10 @@ POST http://localhost:3000/api/auth/sign_up
 Content-Type:  application/json
 
 {
-    "username":"Alex10",
-    "email": "Alex10@test.com",
-    "password":"password10",
-    "password_confirmation":"password10"
+    "username":"Alex11",
+    "email": "Alex11@test.com",
+    "password":"password11",
+    "password_confirmation":"password11"
 }
 
 ### Sign In with correct details

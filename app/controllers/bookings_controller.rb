@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
     end
 
     def show
-        render json: @booking
+        render json: @booking.transform_booking
     end
 
     def create

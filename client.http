@@ -1,8 +1,8 @@
 ### Index method
 GET http://localhost:3000/api/details
 
-### Succesfull Show method detail 1
-GET http://localhost:3000/api/details/1
+### Succesfull Show method detail 2
+GET http://localhost:3000/api/details/2
 
 ### Unuccesfull Show method detail 
 GET http://localhost:3000/api/details/999

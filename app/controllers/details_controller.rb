@@ -9,7 +9,7 @@ class DetailsController < ApplicationController
     end
 
     def show
-        render json: @detail
+        render json: @detail.transform_detail
     end
 
     def create

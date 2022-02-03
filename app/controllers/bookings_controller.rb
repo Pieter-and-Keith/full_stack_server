@@ -51,7 +51,7 @@ class BookingsController < ApplicationController
     end
 
     def check_ownership
-        if current_user.id != @booking.user.id
+        if  (current_user.username != "admin")
             render json: {error: "you dont have permission to do that"}, status: 401
         end
     end

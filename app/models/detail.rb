@@ -15,9 +15,10 @@ class Detail < ApplicationRecord
             state: self.state,
             rego: self.rego,
             make: self.make,
-            model: self.model,
-            posted: self.created_at,
-            edited: self.updated_at
+
+            model: self.model
+            # posted: self.created_at,
+            # edited: self.updated_at
         }
     end
 end

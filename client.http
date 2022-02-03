@@ -1,8 +1,8 @@
 ### Index method
 GET http://localhost:3000/api/details
 
-### Succesfull Show method detail 1
-GET http://localhost:3000/api/details/1
+### Succesfull Show method detail 2
+GET http://localhost:3000/api/details/2
 
 ### Unuccesfull Show method detail 
 GET http://localhost:3000/api/details/999
@@ -10,11 +10,11 @@ GET http://localhost:3000/api/details/999
 ### Successfully post a new user detail
 POST http://localhost:3000/api/details
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM4MDkzMjMsInN1YiI6NX0.rFRD8H-Y_aa80_Uqqw6azg73g4gWECHKwPs7AGgPsXk
-# the token has to be the created user jwt token 
+
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM4NTg4MDIsInN1YiI6N30.0PyCAUj3EgvydAA1-RzpJe8IBIraHjGvd-x-2Lcy4U4
 
 {
-    "first_name":"Alex",
+    "first_name":"Alex11",
     "last_name":"Kaporanos",
     "phone_number":"0466888999",
     "street_number":123,
@@ -62,10 +62,11 @@ POST http://localhost:3000/api/auth/sign_up
 Content-Type:  application/json
 
 {
-    "username":"Alex9",
-    "email": "Alex9@test.com",
-    "password":"password10",
-    "password_confirmation":"password10"
+    "username":"Alex11",
+    "email": "Alex11@test.com",
+    "password":"password11",
+    "password_confirmation":"password11"
+
 }
 
 ### Sign In with correct details
@@ -73,8 +74,8 @@ POST http://localhost:3000/api/auth/sign_in
 Content-Type: application/json
 
 {
-    "email":"Alex9@test.com",
-    "password":"password10"
+    "email":"keith@test.com",
+    "password":"Password2"
 }
 
 ### Sign In with admin details
@@ -96,7 +97,9 @@ GET http://localhost:3000/api/options/1
 ### Create new option
 POST http://localhost:3000/api/options
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM4MDk3MzMsInN1YiI6MX0.LRZrDyuamgbvFksq-e3LCBuN_DKLzJOJiZnHzb8S1kw
+
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM5MzMxOTQsInN1YiI6MX0.2vvSF2dYaCbySlWqmsElUdVPhyuP91CHzpUmfn_LosY
+>>>>>>> c4aa4d6e871d2fa564165f3a62fdba8f02e38f1d
 
 {
     "service_type":"abc abc abc",
@@ -125,8 +128,10 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM4MDk3M
 
 GET http://localhost:3000/api/bookings
 
-### display Booking 1
-GET http://localhost:3000/api/bookings/1
+
+### display Booking 2
+GET http://localhost:3000/api/bookings/2
+>>>>>>> c4aa4d6e871d2fa564165f3a62fdba8f02e38f1d
 
 ### create booking
 POST http://localhost:3000/api/bookings
@@ -142,16 +147,13 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM4MDk3M
 }
 
 ### Update booking
-PUT http://localhost:3000/api/bookings/3
+PUT http://localhost:3000/api/bookings/2
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDkxNDAsInN1YiI6MX0.B8-lMc8aBwx_O1TAY-blkfHxGWq0F6-a3RUTmme-U0w
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM5MzQ2NzgsInN1YiI6MX0.VTPz3Jai5ndmbMSHktyHoOEwi6Ra9o3E5a5NjYDyP3k
 
 {
-    "option_id":4,
-    "date": "66/12/2022",
-    "comment": "BYE!!! Goodnight World",
     "finished": true,
-    "paid": false
+    "paid": true
 }
 
 ### Update booking

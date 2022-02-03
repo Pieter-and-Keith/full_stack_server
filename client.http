@@ -72,8 +72,8 @@ POST http://localhost:3000/api/auth/sign_in
 Content-Type: application/json
 
 {
-    "email":"pieter@test.com",
-    "password":"Password1"
+    "email":"keith@test.com",
+    "password":"Password2"
 }
 
 ### Sign In with admin details
@@ -95,7 +95,7 @@ GET http://localhost:3000/api/options/1
 ### Create new option
 POST http://localhost:3000/api/options
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDI3NDQsInN1YiI6MX0.8-K2_769G5DAJx-021ET3Lep3SwgSgTqRGrFv84MDws
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM5MzMxOTQsInN1YiI6MX0.2vvSF2dYaCbySlWqmsElUdVPhyuP91CHzpUmfn_LosY
 
 {
     "service_type":"abc abc abc",
@@ -124,8 +124,8 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDQyO
 
 GET http://localhost:3000/api/bookings
 
-### display Booking 1
-GET http://localhost:3000/api/bookings/10
+### display Booking 2
+GET http://localhost:3000/api/bookings/2
 
 ### create booking
 POST http://localhost:3000/api/bookings
@@ -141,16 +141,13 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDkxN
 }
 
 ### Update booking
-PUT http://localhost:3000/api/bookings/3
+PUT http://localhost:3000/api/bookings/2
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDkxNDAsInN1YiI6MX0.B8-lMc8aBwx_O1TAY-blkfHxGWq0F6-a3RUTmme-U0w
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM5MzQ2NzgsInN1YiI6MX0.VTPz3Jai5ndmbMSHktyHoOEwi6Ra9o3E5a5NjYDyP3k
 
 {
-    "option_id":4,
-    "date": "66/12/2022",
-    "comment": "BYE!!! Goodnight World",
     "finished": true,
-    "paid": false
+    "paid": true
 }
 
 ### Update booking

@@ -18,9 +18,9 @@ if Detail.count == 0
 end
 
 if Option.count == 0
-    Option.create(service_type: "yearly service", description: "After a full your on the road, your car deserves some love...", price: 249)
+    Option.create(service_type: "yearly service", description: "After a full year on the road, your car deserves some love...", price: 249)
     Option.create(service_type: "battery replacment", description: "Having troubles to get your car started? let's have us a look at it's battery", price: 450)
-    Option.create(service_type: "new tyres", description:"Are your tyres worn out? We have an awesom collection of brand new ones", price: 600)
+    Option.create(service_type: "new tyres", description:"Are your tyres worn out? We have an awesome collection of brand new ones", price: 600)
     Option.create(service_type: "car wash", description:"Too busy to wash your car?... no worries, we'll do it for you", price: 80)
 end
 

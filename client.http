@@ -10,7 +10,7 @@ GET http://localhost:3000/api/details/999
 ### Successfully post a new user detail
 POST http://localhost:3000/api/details
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM4NTg4MDIsInN1YiI6N30.0PyCAUj3EgvydAA1-RzpJe8IBIraHjGvd-x-2Lcy4U4
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQxODkwMjgsInN1YiI6M30.HyeIzdnHRsWmgeOBev5m0PGCAaqWqA25ELvhquvlvG8
 
 {
     "first_name":"Alex11",
@@ -22,14 +22,15 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM4NTg4M
     "postcode":2100,
     "state": "NSW",
     "rego": "QQT565",
-    "make": "Nissan",
-    "model": "Patrol" 
+    "make": "Nissan", 
+    "model": "Pajero"
 }
 
 ### Unuccessfully post a new user detail
 
 POST http://localhost:3000/api/details
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQxODkwMjgsInN1YiI6M30.HyeIzdnHRsWmgeOBev5m0PGCAaqWqA25ELvhquvlvG8
 
 {
     "first_name":"Zino",

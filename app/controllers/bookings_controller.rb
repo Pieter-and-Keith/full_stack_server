@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
         if @booking.errors.any?
             reneder json: @booking.errors, status: 422
         else
-            render json: @booking, status: 201
+            render json: @booking.transform_booking, status: 201
         end
     end
 

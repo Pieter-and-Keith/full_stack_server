@@ -136,7 +136,7 @@ GET http://localhost:3000/api/bookings/2
 ### create booking
 POST http://localhost:3000/api/bookings
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM4MDk3MzMsInN1YiI6MX0.LRZrDyuamgbvFksq-e3LCBuN_DKLzJOJiZnHzb8S1kw
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQxMDc5NjUsInN1YiI6M30.3HNV4DWjEt7CL9ZsVjlUV6i4KFvXcS-5t39Lnw7S1ac
 
 {
     "option_id":1,

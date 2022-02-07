@@ -10,6 +10,7 @@ GET http://localhost:3000/api/details/999
 ### Successfully post a new user detail
 POST http://localhost:3000/api/details
 Content-Type: application/json
+
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM4NTg4MDIsInN1YiI6N30.0PyCAUj3EgvydAA1-RzpJe8IBIraHjGvd-x-2Lcy4U4
 
 {
@@ -45,7 +46,7 @@ Content-Type: application/json
 
 PUT http://localhost:3000/api/details/4
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM1ODk1NDcsInN1YiI6NH0.gz663Fd3jwZozZ4d3z_Wy-NlQKSWexgpo6M_AMWJwHg
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM4MTE1MDksInN1YiI6NX0.N_gv8ovz0YGzePNVlmcR2A641dE4KSwOP5763ZO0_wY
 
 {
     "first_name":"Billie",
@@ -65,6 +66,7 @@ Content-Type:  application/json
     "email": "Alex11@test.com",
     "password":"password11",
     "password_confirmation":"password11"
+
 }
 
 ### Sign In with correct details
@@ -95,7 +97,9 @@ GET http://localhost:3000/api/options/1
 ### Create new option
 POST http://localhost:3000/api/options
 Content-Type: application/json
+
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM5MzMxOTQsInN1YiI6MX0.2vvSF2dYaCbySlWqmsElUdVPhyuP91CHzpUmfn_LosY
+>>>>>>> c4aa4d6e871d2fa564165f3a62fdba8f02e38f1d
 
 {
     "service_type":"abc abc abc",
@@ -106,7 +110,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM5MzMxO
 ### Update option
 PUT http://localhost:3000/api/options/2
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDM5NzUsInN1YiI6NH0.cGyuezjBT8WJRPIylkt2HddVO3BVLIpfO4rK5wBUcsM
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM4MDk3MzMsInN1YiI6MX0.LRZrDyuamgbvFksq-e3LCBuN_DKLzJOJiZnHzb8S1kw
 
 {
     "service_type":"xyz xyz xyz",
@@ -117,20 +121,22 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDM5N
 ### Delete option
 DELETE http://localhost:3000/api/options/5
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDQyODAsInN1YiI6MX0.XO7ZtNHOH4Eg_jfar3J9hazCI7tD9umFeTvyDSTHJHE
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM4MDk3MzMsInN1YiI6MX0.LRZrDyuamgbvFksq-e3LCBuN_DKLzJOJiZnHzb8S1kw
 
 
 ### display Bookings index
 
 GET http://localhost:3000/api/bookings
 
+
 ### display Booking 2
 GET http://localhost:3000/api/bookings/2
+>>>>>>> c4aa4d6e871d2fa564165f3a62fdba8f02e38f1d
 
 ### create booking
 POST http://localhost:3000/api/bookings
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM2MDkxNDAsInN1YiI6MX0.B8-lMc8aBwx_O1TAY-blkfHxGWq0F6-a3RUTmme-U0w
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQxMDc5NjUsInN1YiI6M30.3HNV4DWjEt7CL9ZsVjlUV6i4KFvXcS-5t39Lnw7S1ac
 
 {
     "option_id":1,

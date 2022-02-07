@@ -10,7 +10,6 @@ GET http://localhost:3000/api/details/999
 ### Successfully post a new user detail
 POST http://localhost:3000/api/details
 Content-Type: application/json
-
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM4NTg4MDIsInN1YiI6N30.0PyCAUj3EgvydAA1-RzpJe8IBIraHjGvd-x-2Lcy4U4
 
 {

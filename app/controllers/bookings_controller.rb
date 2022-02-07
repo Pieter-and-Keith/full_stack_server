@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     def create
         @booking = current_user.bookings.create(booking_params)
         if @booking.errors.any?
-            reneder json: @booking.errors, status: 422
+            render json: @booking.errors, status: 422
         else
             render json: @booking.transform_booking, status: 201
         end

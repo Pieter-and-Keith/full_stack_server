@@ -1,6 +1,10 @@
 class Detail < ApplicationRecord
     belongs_to :user
 
+    # validating data when details are getting entered into db
+    validates :first_name ,:last_name, :phone_number, :street_number, :street_name, :suburb, :postcode, :state, :rego, :make, :model, presence: true
+    validates :postcode, :street_number, numericality: {only_integer: true}
+
     def transform_detail
         return {
             username: self.user.username,
@@ -15,10 +19,7 @@ class Detail < ApplicationRecord
             state: self.state,
             rego: self.rego,
             make: self.make,
-
             model: self.model
-            # posted: self.created_at,
-            # edited: self.updated_at
         }
     end
 end

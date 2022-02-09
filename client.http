@@ -97,9 +97,7 @@ GET http://localhost:3000/api/options/1
 ### Create new option
 POST http://localhost:3000/api/options
 Content-Type: application/json
-
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDM5MzMxOTQsInN1YiI6MX0.2vvSF2dYaCbySlWqmsElUdVPhyuP91CHzpUmfn_LosY
->>>>>>> c4aa4d6e871d2fa564165f3a62fdba8f02e38f1d
 
 {
     "service_type":"abc abc abc",

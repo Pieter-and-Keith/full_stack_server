@@ -4,6 +4,7 @@ class Booking < ApplicationRecord
 
   def transform_booking
     return {
+      booking_id: self.id,
       user_id: self.user.id,
       username: self.user.username,
       email: self.user.email,
@@ -26,6 +27,6 @@ class Booking < ApplicationRecord
       make: self.user.details[0].make,
       model: self.user.details[0].model
     }
-    
   end
+
 end

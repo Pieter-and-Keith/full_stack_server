@@ -19,7 +19,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQ0NjUzM
     "street_number":123,
     "street_name": "The Corso",
     "suburb":"Manly",
-    "postcode":2100,
+    "postcode":"a2100",
     "state": "NSW",
     "rego": "QQT565",
     "make": "Nissan", 
@@ -129,17 +129,16 @@ GET http://localhost:3000/api/bookings
 
 ### display Booking 2
 GET http://localhost:3000/api/bookings/2
->>>>>>> c4aa4d6e871d2fa564165f3a62fdba8f02e38f1d
 
 ### create booking
 POST http://localhost:3000/api/bookings
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQxMDc5NjUsInN1YiI6M30.3HNV4DWjEt7CL9ZsVjlUV6i4KFvXcS-5t39Lnw7S1ac
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQ0NjgzNDMsInN1YiI6M30.ErlCxRhWkXpXdG9ou0MVPIuGZQwuyBl-tS9lSH2VcNw
 
 {
     "option_id":1,
-    "date": "02/02/2022",
     "comment": "Hello World",
+    "date": "02/02/2022",
     "finished": false,
     "paid": false
 }

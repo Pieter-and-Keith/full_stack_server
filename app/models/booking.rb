@@ -2,6 +2,8 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :option
 
+  validates :date,:option_id, presence: true
+
   def transform_booking
     return {
       booking_id: self.id,
@@ -28,13 +30,5 @@ class Booking < ApplicationRecord
       model: self.user.details[0].model
     }
   end
-
-  # def transform_bookings
-  #   bookings_array = self.map do |booking|
-  #     booking.transform_booking
-  #   end
-
-  #   return bookings_array
-  # end
 
 end

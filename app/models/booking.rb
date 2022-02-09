@@ -29,4 +29,12 @@ class Booking < ApplicationRecord
     }
   end
 
+  # def transform_bookings
+  #   bookings_array = self.map do |booking|
+  #     booking.transform_booking
+  #   end
+
+  #   return bookings_array
+  # end
+
 end

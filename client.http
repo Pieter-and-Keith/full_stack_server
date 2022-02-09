@@ -129,7 +129,6 @@ GET http://localhost:3000/api/bookings
 
 ### display Booking 2
 GET http://localhost:3000/api/bookings/2
->>>>>>> c4aa4d6e871d2fa564165f3a62fdba8f02e38f1d
 
 ### create booking
 POST http://localhost:3000/api/bookings

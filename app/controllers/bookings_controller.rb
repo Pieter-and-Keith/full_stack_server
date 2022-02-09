@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
     before_action :check_ownership, only: [:update,:destroy]
 
     def index
-        @bookings = Booking.all
+        @bookings = Booking.all.map{|booking| booking.transform_booking}
         render json: @bookings
     end
 

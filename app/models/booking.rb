@@ -27,6 +27,6 @@ class Booking < ApplicationRecord
       make: self.user.details[0].make,
       model: self.user.details[0].model
     }
-    
   end
+
 end
